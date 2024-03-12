@@ -152,10 +152,10 @@ SELECT *
 
 -- 12. Retrieve customers who have not made any payments.
 SELECT c.*
-FROM customer_table c
-LEFT JOIN lease_table l ON c.cust_id = l.cust_id
-LEFT JOIN payment_table p ON l.lease_id = p.lease_id
-WHERE l.cust_id IS NULL;
+	FROM customer_table c
+	LEFT JOIN lease_table l ON c.cust_id = l.cust_id
+	LEFT JOIN payment_table p ON l.lease_id = p.lease_id
+		WHERE l.cust_id IS NULL;
         
 -- 13. Retrieve Car Details and Their Total Payments.
 SELECT v.*, p.transaction_date, p.amount
